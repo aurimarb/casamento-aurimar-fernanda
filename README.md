@@ -56,6 +56,12 @@ npm start
 
 7. (Opcional) Em **Settings** → **Domains** você pode adicionar um domínio próprio.
 
+**Se aparecer 404 NOT_FOUND após o deploy:** em **Settings** → **General** → **Build & Development Settings** confira:
+- **Framework Preset:** deve ser **Next.js** (não "Other").
+- **Output Directory:** deixe em branco (o padrão do Next.js é `.next`).
+- **Root Directory:** deixe em branco se o projeto está na raiz do repositório.
+Depois faça um novo deploy (Deployments → ⋮ no último deploy → Redeploy).
+
 ### Opção 2: Pela CLI
 
 1. Instale a Vercel CLI:
