@@ -1,3 +1,5 @@
 EXPORT/*
 node_modules
 .next
+lib/*
+scripts/*

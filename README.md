@@ -85,10 +85,23 @@ O site ficará disponível em um endereço como `site-casamento-xxx.vercel.app`.
 
 ## Imagens
 
-Os placeholders visuais podem ser substituídos por fotos reais. Coloque as imagens em `public/` e use o componente `Image` do Next.js ou tags `<img src="/nome-da-foto.jpg">`.
+Todas as imagens do site vêm de **`public/export/`** (veja `public/export/README.md` para nomes dos arquivos).
+
+1. Copie os PNGs para `public/export/` ou rode `npm run copy-images` (a partir de `export/` ou `EXPORT/` na raiz).
+2. Gere/atualize o manifest com dimensões reais a partir dos PNGs:
+   ```bash
+   npm run sync-images
+   ```
+3. **Opcional** — WebP + trim de bordas + JSON apontando para `.webp`:
+   ```bash
+   npm run optimize-images
+   ```
 
 ## Estrutura
 
-- `app/layout.tsx` — layout raiz e fontes (Cormorant Garamond, Crimson Text)
-- `app/page.tsx` — página principal (Server Component, SSR)
-- `app/globals.css` — estilos globais e responsivos
+- `app/layout.tsx` — layout raiz e fontes Google (Allura para o título, Cinzel para o restante)
+- `app/page.tsx` — página principal com `next/image` e dimensões de `lib/export-image-sizes.json`
+- `app/globals.css` — estilos responsivos (artboards mobile / Web_1229 / Web_1920)
+- `lib/export-image-sizes.json` — `src`, `width` e `height` por asset (atualizado por `sync-images` ou `optimize-images`)
+- `scripts/sync-export-image-sizes.mjs` — lê PNGs em `public/export/` e grava o JSON
+- `scripts/optimize-export-images.mjs` — trim, bordas claras → branco, WebP e regeneração do JSON

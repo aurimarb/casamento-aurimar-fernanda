@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "copy-images": "cp export/*.png public/export/ 2>/dev/null; cp EXPORT/*.png public/export/ 2>/dev/null; cp export/*.jpg public/export/ 2>/dev/null; cp EXPORT/*.jpg public/export/ 2>/dev/null; true"
+    "copy-images": "cp export/*.png public/export/ 2>/dev/null; cp EXPORT/*.png public/export/ 2>/dev/null; cp export/*.jpg public/export/ 2>/dev/null; cp EXPORT/*.jpg public/export/ 2>/dev/null; true",
+    "optimize-images": "node scripts/optimize-export-images.mjs",
+    "sync-images": "node scripts/sync-export-image-sizes.mjs"
   },
   "dependencies": {
     "next": "14.2.35",
@@ -19,6 +21,7 @@
     "@types/prop-types": "^15.7.15",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
+    "sharp": "^0.34.5",
     "typescript": "^5.5.0"
   }
 }

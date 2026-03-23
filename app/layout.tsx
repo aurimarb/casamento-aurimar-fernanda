@@ -1,17 +1,25 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Crimson_Text } from 'next/font/google';
+import { Allura, Cinzel } from 'next/font/google';
 import './globals.css';
 
-const cormorant = Cormorant_Garamond({
-  weight: ['400', '600'],
+/**
+ * Fonte script para o título hero — substitui La Bohemienne do Figma
+ * Allura é uma script elegante e fluida, muito similar
+ */
+const allura = Allura({
+  weight: '400',
   subsets: ['latin'],
-  variable: '--font-display',
+  variable: '--font-script',
 });
 
-const crimson = Crimson_Text({
-  weight: ['400', '600'],
+/**
+ * Fonte display/body — substitui Trajan Pro 3 do Figma
+ * Cinzel é inspirada em inscrições romanas, a mais próxima disponível
+ */
+const cinzel = Cinzel({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
-  variable: '--font-body',
+  variable: '--font-display',
 });
 
 export const metadata: Metadata = {
@@ -26,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${cormorant.variable} ${crimson.variable}`}>
+    <html lang="pt-BR" className={`${allura.variable} ${cinzel.variable}`}>
       <body>{children}</body>
     </html>
   );
