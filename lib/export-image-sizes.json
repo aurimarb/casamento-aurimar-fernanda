@@ -1,0 +1,42 @@
+{
+  "aac": {
+    "src": "/export/aac.png",
+    "width": 1920,
+    "height": 831
+  },
+  "aak": {
+    "src": "/export/aak.png",
+    "width": 848,
+    "height": 651
+  },
+  "aah": {
+    "src": "/export/aah.png",
+    "width": 848,
+    "height": 651
+  },
+  "aba": {
+    "src": "/export/aba.png",
+    "width": 94,
+    "height": 112
+  },
+  "abb": {
+    "src": "/export/abb.png",
+    "width": 108,
+    "height": 108
+  },
+  "abc": {
+    "src": "/export/abc.png",
+    "width": 108,
+    "height": 108
+  },
+  "abd": {
+    "src": "/export/abd.png",
+    "width": 108,
+    "height": 108
+  },
+  "acb": {
+    "src": "/export/acb.png",
+    "width": 800,
+    "height": 400
+  }
+}
