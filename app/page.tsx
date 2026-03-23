@@ -26,7 +26,7 @@ export default function Home() {
             width={hero.width}
             height={hero.height}
             className="hero__img"
-            sizes="(max-width: 768px) 100vw, (max-width: 900px) 90vw, 900px"
+            sizes="(max-width: 768px) 100vw, min(1200px, calc(100vw - 3rem))"
             quality={100}
             priority
           />
