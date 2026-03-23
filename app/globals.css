@@ -251,6 +251,30 @@ a {
   margin-bottom: 0;
 }
 
+/* Celular / tablet estreito: cada texto colado à sua foto; mais ar entre os dois blocos */
+@media (max-width: 900px) {
+  .two-columns {
+    gap: 2.75rem;
+  }
+
+  .two-columns__row {
+    gap: 0.5rem;
+  }
+
+  .two-columns .two-columns__figure.image-block {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px 14px 16px;
+  }
+
+  .two-columns__text {
+    margin-top: 0;
+    padding-left: 0.25rem;
+    padding-right: 0.25rem;
+  }
+}
+
 @media (min-width: 901px) {
   .two-columns {
     gap: clamp(2rem, 5vw, 4rem);
