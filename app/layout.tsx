@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
-import { Allura, Cinzel } from 'next/font/google';
+import { Whisper, Cinzel } from 'next/font/google';
 import './globals.css';
 
 /**
  * Fonte script para o título hero — substitui La Bohemienne do Figma
- * Allura é uma script elegante e fluida, muito similar
  */
-const allura = Allura({
+const whisper = Whisper({
   weight: '400',
   subsets: ['latin'],
   variable: '--font-script',
@@ -34,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${allura.variable} ${cinzel.variable}`}>
+    <html lang="pt-BR" className={`${whisper.variable} ${cinzel.variable}`}>
       <body>{children}</body>
     </html>
   );

@@ -76,7 +76,7 @@ a {
 }
 
 .hero__title {
-  font-family: var(--font-script), 'Allura', cursive;
+  font-family: var(--font-script), 'Whisper', cursive;
   font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 400;
   color: var(--color-text);
@@ -257,7 +257,23 @@ a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(2rem, 4vw, 4rem);
+    /* Texto alinhado ao centro vertical da foto */
     align-items: center;
+  }
+
+  /*
+   * Padding vertical simétrico: o .image-block padrão só tinha padding embaixo (sombra),
+   * o que puxava o “centro” do bloco para baixo e o texto parecia mais baixo que o da foto.
+   */
+  .two-columns__figure.image-block {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 35px 20px 35px 20px;
+  }
+
+  /* Refino na 1ª linha se ainda parecer um pouco baixo em relação ao centro da foto */
+  .two-columns__row:first-child .two-columns__text {
+    transform: translateY(-0.2rem);
   }
 
   /* Linha 2: texto à esquerda (coluna 1), foto à direita (coluna 2) */
@@ -285,6 +301,7 @@ a {
   .two-columns__text {
     text-align: center;
     padding: 0 1rem;
+    align-self: center;
   }
 }
 
