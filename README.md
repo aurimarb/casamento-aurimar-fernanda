@@ -99,7 +99,7 @@ Todas as imagens do site vêm de **`public/export/`** (veja `public/export/READM
 
 ## Estrutura
 
-- `app/layout.tsx` — layout raiz e fontes Google (Whisper para o título, Cinzel para o restante)
+- `app/layout.tsx` — layout raiz; **Adobe Fonts** (Typekit `njv3ubd.css`): *La Bohemienne* no título, *Trajan Pro 3* no texto
 - `app/page.tsx` — página principal com `next/image` e dimensões de `lib/export-image-sizes.json`
 - `app/globals.css` — estilos responsivos (artboards mobile / Web_1229 / Web_1920)
 - `lib/export-image-sizes.json` — `src`, `width` e `height` por asset (atualizado por `sync-images` ou `optimize-images`)

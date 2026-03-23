@@ -1,25 +1,10 @@
 import type { Metadata } from 'next';
-import { Whisper, Cinzel } from 'next/font/google';
 import './globals.css';
 
 /**
- * Fonte script para o título hero — substitui La Bohemienne do Figma
+ * Tipografia: Adobe Fonts (Typekit) — la-bohemienne (título) + trajan-pro-3 (corpo)
+ * @see https://use.typekit.net/njv3ubd.css
  */
-const whisper = Whisper({
-  weight: '400',
-  subsets: ['latin'],
-  variable: '--font-script',
-});
-
-/**
- * Fonte display/body — substitui Trajan Pro 3 do Figma
- * Cinzel é inspirada em inscrições romanas, a mais próxima disponível
- */
-const cinzel = Cinzel({
-  weight: ['400', '500', '600', '700'],
-  subsets: ['latin'],
-  variable: '--font-display',
-});
 
 export const metadata: Metadata = {
   title: 'Aurimar e Fernanda - Casamento',
@@ -33,7 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={`${whisper.variable} ${cinzel.variable}`}>
+    <html lang="pt-BR">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/njv3ubd.css"
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
