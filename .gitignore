@@ -2,3 +2,4 @@ EXPORT/*
 node_modules
 .next
 scripts/*
+.qibuild/

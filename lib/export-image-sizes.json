@@ -14,29 +14,29 @@
     "width": 848,
     "height": 651
   },
-  "aba": {
-    "src": "/export/aba.png",
-    "width": 94,
-    "height": 112
+  "aao": {
+    "src": "/export/aao.png",
+    "width": 525,
+    "height": 413
   },
-  "abb": {
-    "src": "/export/abb.png",
-    "width": 108,
-    "height": 108
+  "aap": {
+    "src": "/export/aap@2x.png",
+    "width": 1532,
+    "height": 1022
   },
-  "abc": {
-    "src": "/export/abc.png",
-    "width": 108,
-    "height": 108
+  "aae": {
+    "src": "/export/aae-cropped.png",
+    "width": 375,
+    "height": 1093
   },
-  "abd": {
-    "src": "/export/abd.png",
-    "width": 108,
-    "height": 108
+  "abt": {
+    "src": "/export/abt@2x.png",
+    "width": 784,
+    "height": 1738
   },
   "acb": {
     "src": "/export/acb.png",
-    "width": 800,
-    "height": 400
+    "width": 1920,
+    "height": 1080
   }
 }

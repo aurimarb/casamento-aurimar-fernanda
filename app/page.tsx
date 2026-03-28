@@ -5,20 +5,21 @@ export default function Home() {
   const hero = images.aac;
   const colLeft = images.aak;
   const colRight = images.aah;
-  const footer = images.acb;
 
   return (
     <main>
       {/* Hero */}
       <header className="hero" id="inicio">
-        <h1 className="hero__title">Aurimar e Fernanda</h1>
-        <div className="hero__divider">
-          <span className="hero__line" />
-          <span className="hero__dot" />
-          <span className="hero__line" />
+        <div className="hero__text">
+          <h1 className="hero__title">Aurimar e Fernanda</h1>
+          <div className="hero__divider">
+            <span className="hero__line" />
+            <span className="hero__dot" />
+            <span className="hero__line" />
+          </div>
+          <p className="hero__date">8.8.2026 - 15:00</p>
+          <p className="hero__place">Eco Espaço Eventos, Santa Isabel - SP</p>
         </div>
-        <p className="hero__date">8.8.2026</p>
-        <p className="hero__place">Eco Espaço Eventos, Santa Isabel - SP</p>
         <div className="hero__image-wrap">
           <Image
             src={hero.src}
@@ -26,7 +27,7 @@ export default function Home() {
             width={hero.width}
             height={hero.height}
             className="hero__img"
-            sizes="(max-width: 768px) 100vw, min(1200px, calc(100vw - 3rem))"
+            sizes="100vw"
             quality={100}
             priority
           />
@@ -76,68 +77,64 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INFORMAÇÕES - fundo verde (faixa full-bleed como Web_1920 / Web_1229) */}
-      <section className="info-section" id="informacoes">
-        <div className="info-section__inner">
-          <h2 className="section__title">INFORMAÇÕES</h2>
+      {/* LOCALIZAÇÃO — fundo verde full-bleed */}
+      <section className="localizacao-section" id="localizacao">
+        <div className="localizacao-section__inner">
+          <h2 className="section__title">LOCALIZAÇÃO</h2>
           <div className="section__divider section__divider--on-accent">
             <span className="section__line" />
             <span className="section__dot" />
             <span className="section__line" />
           </div>
-          <nav className="info-links" aria-label="Informações do casamento">
-            <a href="#como-chegar">Como chegar</a>
-            <a href="#confirme">Confirme a sua presença</a>
-            <a href="#lista-presentes">Lista de presentes</a>
-            <a href="#madrinhas-padrinhos">Madrinhas e Padrinhos</a>
-          </nav>
-          <div className="cards-grid cards-grid--icons">
-            <a id="como-chegar" href="#como-chegar" className="card card--outline card--icon">
-              <Image
-                src={images.aba.src}
-                alt=""
-                width={images.aba.width}
-                height={images.aba.height}
-                className="card__icon"
-              />
-              <span className="card__title">Como chegar</span>
-            </a>
-            <a id="confirme" href="#confirme" className="card card--outline card--icon">
-              <Image
-                src={images.abb.src}
-                alt=""
-                width={images.abb.width}
-                height={images.abb.height}
-                className="card__icon"
-              />
-              <span className="card__title">Confirme a sua presença</span>
-            </a>
-            <a id="lista-presentes" href="#lista-presentes" className="card card--outline card--icon">
-              <Image
-                src={images.abc.src}
-                alt=""
-                width={images.abc.width}
-                height={images.abc.height}
-                className="card__icon"
-              />
-              <span className="card__title">Lista de presentes</span>
-            </a>
-            <a id="madrinhas-padrinhos" href="#madrinhas-padrinhos" className="card card--outline card--icon">
-              <Image
-                src={images.abd.src}
-                alt=""
-                width={images.abd.width}
-                height={images.abd.height}
-                className="card__icon"
-              />
-              <span className="card__title">Madrinhas e Padrinhos</span>
-            </a>
+          <p className="localizacao-address">
+            Eco Espaço Eventos — Estr. do Ouro Fino, Km 13 s/n, Santa Isabel - SP, 07500-000
+          </p>
+          <div className="localizacao-map">
+            <iframe
+              src="https://maps.google.com/maps?q=Eco+Espa%C3%A7o+Eventos+Estr.+do+Ouro+Fino+Km+13+Santa+Isabel+SP+07500-000&output=embed&iwloc=&z=15"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Localização Eco Espaço Eventos"
+            />
           </div>
+        </div>
+        {/* Floral border — full-width, two images side by side to avoid upscale loss */}
+        <div className="localizacao-below-map">
+          <Image
+            src={images.aap.src}
+            alt=""
+            width={images.aap.width}
+            height={images.aap.height}
+            sizes="50vw"
+            style={{ width: "50%", height: "100%", objectFit: "cover", objectPosition: "bottom", display: "block", flexShrink: 0 }}
+          />
+          <Image
+            src={images.aap.src}
+            alt=""
+            width={images.aap.width}
+            height={images.aap.height}
+            sizes="50vw"
+            style={{ width: "50%", height: "100%", objectFit: "cover", objectPosition: "bottom", display: "block", flexShrink: 0 }}
+          />
         </div>
       </section>
 
       {/* Hospedagem */}
       <section className="section" id="hospedagem">
+        <div className="hospedagem-deco">
+          <Image
+            src={images.aae.src}
+            alt=""
+            width={images.aae.width}
+            height={images.aae.height}
+            sizes="136px"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
         <h2 className="section__title">Hospedagem</h2>
         <div className="section__divider">
           <span className="section__line" />
@@ -160,65 +157,72 @@ export default function Home() {
               R. São José, 888 - Jardim Rincao, Arujá - SP, 07400-405
             </span>
           </li>
+          <li className="venue-list__item">
+            <span className="venue-list__name">Bristol Villaggio Rosa Arujá</span>
+            <span className="venue-list__address">
+              Av. Airton dos Santos Heras Galves, Galvéz, 333 - Jardim Aruja, Arujá - SP, 07407-040
+            </span>
+          </li>
         </ul>
       </section>
 
-      {/* Salão de beleza */}
-      <section className="section" id="salao">
-        <h2 className="section__title">Salão de beleza</h2>
+      {/* CONVIDADOS */}
+      <section className="section" id="convidados">
+        <div className="convidados-deco">
+          <Image
+            src={images.abt.src}
+            alt=""
+            width={images.abt.width}
+            height={images.abt.height}
+            sizes="231px"
+            style={{ width: "100%", height: "auto", display: "block" }}
+          />
+        </div>
+        <h2 className="section__title">CONVIDADOS</h2>
         <div className="section__divider">
           <span className="section__line" />
           <span className="section__dot" />
           <span className="section__line" />
         </div>
         <p className="section__body">
-          Para quem quiser se arrumar pertinho do local do casamento, deixamos
-          abaixo algumas sugestões de salões de beleza e profissionais da
-          região. Assim fica mais fácil se preparar com conforto e sem pressa!
+          Pedimos, com carinho, que leiam as orientações a seguir — elas vão
+          ajudar a garantir o conforto, a organização e a harmonia da celebração.
         </p>
-        <ul className="venue-list">
-          <li className="venue-list__item">
-            <span className="venue-list__name">Studio Jandy Parladori</span>
-            <span className="venue-list__address">
-              R. Minas Gerais, 205 - Jardim Planalto, Arujá - SP
-            </span>
-          </li>
-          <li className="venue-list__item">
-            <span className="venue-list__name">Stúdio Marcia Maria Arujá</span>
-            <span className="venue-list__address">
-              Rod. Alberto Hinoto, 1510 - Vila Pedroso, Arujá - SP
-            </span>
-          </li>
-          <li className="venue-list__item">
-            <span className="venue-list__name">Tais Santos Concept</span>
-            <span className="venue-list__address">
-              Av. Benedito Manoel dos Santos, 1111c - Jardim Fazenda Rincao,
-              Arujá - SP
-            </span>
-          </li>
-        </ul>
+        <div className="convidados-info">
+          <div className="convidados-item">
+            <p className="convidados-item__title">Confirme sua presença</p>
+            <p className="convidados-item__sub">
+              Você receberá o link da confirmação de presença pelo número de seu celular
+            </p>
+          </div>
+          <div className="convidados-item">
+            <p className="convidados-item__title">Traje esporte fino</p>
+            <p className="convidados-item__sub">*Não usar branco</p>
+          </div>
+          <div className="convidados-item">
+            <p className="convidados-item__title">
+              O local da cerimônia será o mesmo da festa
+            </p>
+          </div>
+          <div className="convidados-item">
+            <p className="convidados-item__title">
+              Haverá a saída de vans no seguinte horário:
+            </p>
+            <p className="convidados-item__sub">20:00 &nbsp;·&nbsp; 21:30 &nbsp;·&nbsp; 23:00</p>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
       <footer className="footer">
-        <div className="footer__image-wrap">
-          <Image
-            src={footer.src}
-            alt=""
-            width={footer.width}
-            height={footer.height}
-            className="footer__img"
-            sizes="(max-width: 400px) 100vw, 400px"
-          />
-        </div>
         <p className="footer__text">
-          Somos imensamente gratos por ter você conosco nessa celebração tão
-          importante. Sua presença torna esse dia ainda mais especial!
+          Somos imensamente gratos por ter você conosco nessa celebração tão importante.
+          <br />
+          Sua presença torna esse dia ainda mais especial!
           <br />
           <br />
           Caso tenha alguma dúvida, entre em contato:
         </p>
-        <p className="footer__place">Eco Espaço Eventos, Santa Isabel - SP</p>
         <div className="footer__divider">
           <span className="footer__line" />
           <span className="footer__dot" />
