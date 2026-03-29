@@ -587,14 +587,6 @@ a {
     font-size: clamp(0.75rem, 3.5vw, 0.9375rem);
   }
 
-  .hero__line {
-    width: clamp(32px, 9vw, 50px);
-  }
-
-  .hero__dot {
-    width: 9px;
-    height: 9px;
-  }
 
   .hero__image-wrap {
     margin-top: 0;
