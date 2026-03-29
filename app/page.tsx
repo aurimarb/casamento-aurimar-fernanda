@@ -30,6 +30,7 @@ export default function Home() {
             sizes="100vw"
             quality={100}
             priority
+            style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
       </header>
