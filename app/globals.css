@@ -98,17 +98,17 @@ a {
 }
 
 .hero__line {
-  width: 60px;
-  height: 1px;
+  width: clamp(100px, 16vw, 160px);
+  height: 4px;
+  border-radius: 1px;
   background: var(--color-text);
 }
 
 .hero__dot {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  border: 1px solid var(--color-text);
-  background: transparent;
+  background: var(--color-text);
 }
 
 .hero__date {
@@ -177,10 +177,10 @@ a {
 
 .section__title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.25rem, calc(0.5rem + 2.5vw), 2.5rem);
   text-align: center;
   color: var(--color-text);
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
 }
 
 .section__divider {
@@ -188,11 +188,11 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1.25rem, 3vw, 2rem);
 }
 
 .section__line {
-  width: 80px;
+  width: clamp(100px, 16vw, 160px);
   height: 4px;
   border-radius: 1px;
   background: currentColor;
@@ -206,7 +206,7 @@ a {
 }
 
 .section__body {
-  font-size: clamp(0.875rem, 1.35vw, 1.0625rem);
+  font-size: clamp(0.875rem, calc(0.75rem + 0.5vw), 1.125rem);
   text-align: center;
   max-width: 720px;
   margin: 0 auto;
@@ -221,8 +221,8 @@ a {
 .two-columns {
   display: flex;
   flex-direction: column;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
-  margin-top: 2rem;
+  gap: clamp(2rem, 5vw, 3rem);
+  margin-top: clamp(1rem, 3vw, 2rem);
   overflow: visible;
 }
 
@@ -230,7 +230,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: clamp(1rem, 2.5vw, 1.5rem);
   overflow: visible;
 }
 
@@ -238,8 +238,8 @@ a {
   max-width: none;
   width: 100%;
   font-family: var(--font-display);
-  font-size: clamp(0.875rem, 1.35vw, 1.0625rem);
-  line-height: 1.6;
+  font-size: clamp(0.875rem, calc(0.75rem + 0.5vw), 1.125rem);
+  line-height: 1.65;
   text-align: center;
   color: var(--color-text);
 }
@@ -252,11 +252,11 @@ a {
 /* Celular / tablet estreito: cada texto colado à sua foto; mais ar entre os dois blocos */
 @media (max-width: 900px) {
   .two-columns {
-    gap: 2.75rem;
+    gap: clamp(2rem, 5vw, 2.75rem);
   }
 
   .two-columns__row {
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   .two-columns .two-columns__figure.image-block {
@@ -275,25 +275,25 @@ a {
 
 @media (min-width: 901px) {
   .two-columns {
-    gap: clamp(2rem, 5vw, 4rem);
+    gap: 0;
   }
 
   .two-columns__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(2rem, 4vw, 4rem);
+    gap: clamp(2rem, 4vw, 3rem);
     /* Texto alinhado ao centro vertical da foto */
     align-items: center;
   }
 
   /*
    * Padding vertical simétrico: o .image-block padrão só tinha padding embaixo (sombra),
-   * o que puxava o “centro” do bloco para baixo e o texto parecia mais baixo que o da foto.
+   * o que puxava o "centro" do bloco para baixo e o texto parecia mais baixo que o da foto.
    */
   .two-columns__figure.image-block {
     margin-top: 0;
     margin-bottom: 0;
-    padding: 35px 20px 35px 20px;
+    padding: 17px 20px 17px 20px;
   }
 
   /* Refino na 1ª linha se ainda parecer um pouco baixo em relação ao centro da foto */
@@ -356,18 +356,17 @@ a {
 
 /* Divisor branco mais espesso no verde (stroke ~5px no Figma) */
 .section__divider--on-accent .section__line {
-  width: clamp(60px, 18vw, 208px);
+  width: clamp(100px, 16vw, 160px);
   height: 4px;
   background: var(--color-white);
   border-radius: 1px;
 }
 
 .section__divider--on-accent .section__dot {
-  width: 11px;
-  height: 11px;
-  border-width: 2px;
-  border-color: var(--color-white);
-  background: transparent;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--color-white);
 }
 
 /* Cards grid */
@@ -488,15 +487,15 @@ a {
   background-size: 100% auto;
   color: var(--color-white);
   padding: var(--section-padding) 1.5rem;
-  padding-bottom: clamp(180px, 30vw, 520px);
+  padding-bottom: clamp(240px, 40vw, 640px);
   text-align: center;
 }
 
 .footer__text {
   max-width: 560px;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
   font-family: var(--font-display);
-  font-size: clamp(0.875rem, 1.35vw, 1.0625rem);
+  font-size: clamp(0.875rem, calc(0.75rem + 0.5vw), 1.125rem);
   line-height: 1.65;
 }
 
@@ -514,18 +513,17 @@ a {
 }
 
 .footer__line {
-  width: clamp(60px, 18vw, 208px);
+  width: clamp(50px, 8vw, 80px);
   height: 4px;
   background: var(--color-white);
   border-radius: 1px;
 }
 
 .footer__dot {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  border: 2px solid var(--color-white);
-  background: transparent;
+  background: var(--color-white);
 }
 
 /* Salões / hospedagem list */
@@ -568,25 +566,29 @@ a {
     padding: var(--section-padding) 1rem;
   }
 
+  /* Hero: sem padding extra — hero__text já tem seu próprio padding */
   .hero {
     min-height: auto;
+  }
+
+  .hero__text {
     padding: var(--section-padding) 1rem;
   }
 
   .hero__title {
-    font-size: clamp(2rem, 10.5vw, 2.5rem);
+    font-size: clamp(2rem, 10.5vw, 2.75rem);
   }
 
   .hero__date {
-    font-size: 0.9375rem;
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
   }
 
   .hero__place {
-    font-size: 0.8125rem;
+    font-size: clamp(0.75rem, 3.5vw, 0.9375rem);
   }
 
   .hero__line {
-    width: 43px;
+    width: clamp(32px, 9vw, 50px);
   }
 
   .hero__dot {
@@ -595,22 +597,7 @@ a {
   }
 
   .hero__image-wrap {
-    margin: 1.25rem auto;
-    border-radius: 6px;
-  }
-
-  .section__title {
-    font-size: clamp(1.125rem, 4.5vw, 1.35rem);
-  }
-
-  .section__body {
-    font-size: max(0.75rem, 2.65vw);
-    line-height: 1.55;
-  }
-
-  .two-columns__text {
-    font-size: max(0.75rem, 2.65vw);
-    line-height: 1.55;
+    margin-top: 0;
   }
 
   .info-section__inner {
@@ -659,44 +646,21 @@ a {
 
   .footer {
     padding: var(--section-padding) 1rem;
-    padding-bottom: clamp(180px, 30vw, 520px);
-  }
-
-  .footer__text {
-    font-size: max(0.75rem, 2.65vw);
-    line-height: 1.55;
-  }
-
-  .footer__place {
-    font-size: 0.875rem;
+    padding-bottom: clamp(240px, 40vw, 640px);
   }
 }
 
 @media (min-width: 481px) and (max-width: 1228px) {
   .hero__title {
-    font-size: clamp(3.25rem, 9vw, 6.25rem);
+    font-size: clamp(3rem, 9vw, 6rem);
   }
 
   .hero__date {
-    font-size: clamp(1.5rem, 3.5vw, 1.875rem);
+    font-size: clamp(1.375rem, 3.5vw, 1.875rem);
   }
 
   .hero__place {
-    font-size: clamp(0.9rem, 2vw, 1.125rem);
-  }
-
-  .section__title {
-    font-size: clamp(1.75rem, 3.5vw, 2.35rem);
-  }
-
-  .section__body {
-    font-size: 1.125rem;
-    line-height: 1.55;
-  }
-
-  .two-columns__text {
-    font-size: 18px;
-    line-height: 1.55;
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
   }
 
   .cards-grid--icons {
@@ -711,19 +675,6 @@ a {
   .info-links {
     font-size: clamp(0.875rem, 1.85vw, 1.05rem);
     gap: 0.75rem 1.5rem;
-  }
-
-  .venue-list__name {
-    font-size: 1.0625rem;
-  }
-
-  .venue-list__address {
-    font-size: 0.8125rem;
-  }
-
-  .footer__text {
-    font-size: 1.125rem;
-    line-height: 1.55;
   }
 }
 
@@ -740,39 +691,8 @@ a {
     font-size: clamp(1rem, 1.25vw, 1.25rem);
   }
 
-  .section__title {
-    font-size: clamp(1.875rem, 2.35vw, 2.5rem);
-  }
-
-  .section__body {
-    font-size: clamp(0.9375rem, 1.05vw, 1.4375rem);
-    line-height: 1.65;
-  }
-
-  .two-columns__text {
-    font-size: clamp(1.25rem, 1.65vw, 1.4375rem);
-    line-height: 1.55;
-  }
-
   .info-links {
     font-size: clamp(0.875rem, 1.15vw, 1.0625rem);
-  }
-
-  .venue-list__name {
-    font-size: 1.0625rem;
-  }
-
-  .venue-list__address {
-    font-size: 0.8125rem;
-  }
-
-  .footer__text {
-    font-size: clamp(0.9375rem, 1.05vw, 1.4375rem);
-    line-height: 1.65;
-  }
-
-  .footer__place {
-    font-size: 1rem;
   }
 
   .card--outline .card__title {
@@ -799,7 +719,7 @@ a {
 
 .localizacao-address {
   font-family: var(--font-display);
-  font-size: clamp(0.875rem, 1.35vw, 1.0625rem);
+  font-size: clamp(0.875rem, calc(0.75rem + 0.5vw), 1.125rem);
   color: var(--color-white);
   text-align: center;
   margin-bottom: 1.5rem;
@@ -810,7 +730,7 @@ a {
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 16 / 7;
-  max-height: 420px;
+  max-height: 460px;
 }
 
 .localizacao-map iframe {
@@ -938,8 +858,8 @@ a {
 .convidados-info {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
-  margin-top: 2rem;
+  gap: clamp(1.25rem, 3vw, 1.75rem);
+  margin-top: clamp(1.25rem, 3vw, 2rem);
 }
 
 .convidados-item {
@@ -948,13 +868,13 @@ a {
 
 .convidados-item__title {
   font-family: var(--font-display);
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-size: clamp(0.9375rem, calc(0.75rem + 0.75vw), 1.25rem);
   color: var(--color-text);
   margin-bottom: 0.35rem;
 }
 
 .convidados-item__sub {
-  font-size: clamp(0.8125rem, 1.15vw, 1rem);
+  font-size: clamp(0.8125rem, calc(0.65rem + 0.5vw), 1rem);
   color: var(--color-text-muted);
   line-height: 1.5;
 }

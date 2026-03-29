@@ -231,11 +231,7 @@ export default function Home() {
           <br />
           Caso tenha alguma dúvida, entre em contato:
         </p>
-        <div className="footer__divider">
-          <span className="footer__line" />
-          <span className="footer__dot" />
-          <span className="footer__line" />
-        </div>
+        <div className="footer__divider" />
       </footer>
     </main>
   );
