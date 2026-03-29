@@ -20,9 +20,9 @@
     "height": 413
   },
   "aap": {
-    "src": "/export/aap@2x.png",
+    "src": "/export/aap-cropped.png",
     "width": 1532,
-    "height": 1022
+    "height": 387
   },
   "aae": {
     "src": "/export/aae-cropped.png",
@@ -30,9 +30,9 @@
     "height": 1093
   },
   "abt": {
-    "src": "/export/abt@2x.png",
-    "width": 784,
-    "height": 1738
+    "src": "/export/abt-cropped.png",
+    "width": 480,
+    "height": 1047
   },
   "acb": {
     "src": "/export/acb.png",

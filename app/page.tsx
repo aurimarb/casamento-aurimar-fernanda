@@ -109,7 +109,8 @@ export default function Home() {
             alt=""
             width={images.aap.width}
             height={images.aap.height}
-            sizes="50vw"
+            sizes="(max-width: 900px) 100vw, 50vw"
+            className="localizacao-img--primary"
             style={{ width: "50%", height: "100%", objectFit: "cover", objectPosition: "bottom", display: "block", flexShrink: 0 }}
           />
           <Image
@@ -118,6 +119,7 @@ export default function Home() {
             width={images.aap.width}
             height={images.aap.height}
             sizes="50vw"
+            className="localizacao-img--secondary"
             style={{ width: "50%", height: "100%", objectFit: "cover", objectPosition: "bottom", display: "block", flexShrink: 0 }}
           />
         </div>
@@ -131,85 +133,91 @@ export default function Home() {
             alt=""
             width={images.aae.width}
             height={images.aae.height}
-            sizes="136px"
-            style={{ width: "100%", height: "auto", display: "block" }}
+            sizes="150px"
+            style={{ width: "80%", height: "auto", display: "block" }}
           />
         </div>
-        <h2 className="section__title">Hospedagem</h2>
-        <div className="section__divider">
-          <span className="section__line" />
-          <span className="section__dot" />
-          <span className="section__line" />
+        <div className="hospedagem-content">
+          <h2 className="section__title">Hospedagem</h2>
+          <div className="section__divider">
+            <span className="section__line" />
+            <span className="section__dot" />
+            <span className="section__line" />
+          </div>
+          <p className="section__body">
+            O nosso casamento será em um local cercado pela natureza, um pouquinho
+            afastado da cidade. Há várias opções de casas para aluguel na região,
+            além de hotéis próximos, principalmente em Arujá. Para facilitar,
+            vamos organizar um translado do hotel até o local da cerimônia/festa,
+            assim todo mundo pode curtir sem preocupações! E, se preferir ir de
+            carro, o espaço conta com um amplo estacionamento. Caso opte pelo
+            hotel, abaixo você encontra os hotéis que terão o translado:
+          </p>
+          <ul className="venue-list">
+            <li className="venue-list__item">
+              <span className="venue-list__name">Ibis Hotel Arujá</span>
+              <span className="venue-list__address">
+                R. São José, 888 - Jardim Rincao, Arujá - SP, 07400-405
+              </span>
+            </li>
+            <li className="venue-list__item">
+              <span className="venue-list__name">Bristol Villaggio Rosa Arujá</span>
+              <span className="venue-list__address">
+                Av. Airton dos Santos Heras Galves, Galvéz, 333 - Jardim Aruja, Arujá - SP, 07407-040
+              </span>
+            </li>
+          </ul>
         </div>
-        <p className="section__body">
-          O nosso casamento será em um local cercado pela natureza, um pouquinho
-          afastado da cidade. Há várias opções de casas para aluguel na região,
-          além de hotéis próximos, principalmente em Arujá. Para facilitar,
-          vamos organizar um translado do hotel até o local da cerimônia/festa,
-          assim todo mundo pode curtir sem preocupações! E, se preferir ir de
-          carro, o espaço conta com um amplo estacionamento. Caso opte pelo
-          hotel, abaixo você encontra os hotéis que terão o translado:
-        </p>
-        <ul className="venue-list">
-          <li className="venue-list__item">
-            <span className="venue-list__name">Ibis Hotel Arujá</span>
-            <span className="venue-list__address">
-              R. São José, 888 - Jardim Rincao, Arujá - SP, 07400-405
-            </span>
-          </li>
-          <li className="venue-list__item">
-            <span className="venue-list__name">Bristol Villaggio Rosa Arujá</span>
-            <span className="venue-list__address">
-              Av. Airton dos Santos Heras Galves, Galvéz, 333 - Jardim Aruja, Arujá - SP, 07407-040
-            </span>
-          </li>
-        </ul>
+        <div className="hospedagem-spacer" />
       </section>
 
       {/* CONVIDADOS */}
       <section className="section" id="convidados">
+        <div className="convidados-spacer" />
+        <div className="convidados-content">
+          <h2 className="section__title">CONVIDADOS</h2>
+          <div className="section__divider">
+            <span className="section__line" />
+            <span className="section__dot" />
+            <span className="section__line" />
+          </div>
+          <p className="section__body">
+            Pedimos, com carinho, que leiam as orientações a seguir — elas vão
+            ajudar a garantir o conforto, a organização e a harmonia da celebração.
+          </p>
+          <div className="convidados-info">
+            <div className="convidados-item">
+              <p className="convidados-item__title">Confirme sua presença</p>
+              <p className="convidados-item__sub">
+                Você receberá o link da confirmação de presença pelo número de seu celular
+              </p>
+            </div>
+            <div className="convidados-item">
+              <p className="convidados-item__title">Traje esporte fino</p>
+              <p className="convidados-item__sub">*Não usar branco</p>
+            </div>
+            <div className="convidados-item">
+              <p className="convidados-item__title">
+                O local da cerimônia será o mesmo da festa
+              </p>
+            </div>
+            <div className="convidados-item">
+              <p className="convidados-item__title">
+                Haverá a saída de vans no seguinte horário:
+              </p>
+              <p className="convidados-item__sub">20:00 &nbsp;·&nbsp; 21:30 &nbsp;·&nbsp; 23:00</p>
+            </div>
+          </div>
+        </div>
         <div className="convidados-deco">
           <Image
             src={images.abt.src}
             alt=""
             width={images.abt.width}
             height={images.abt.height}
-            sizes="231px"
+            sizes="150px"
             style={{ width: "100%", height: "auto", display: "block" }}
           />
-        </div>
-        <h2 className="section__title">CONVIDADOS</h2>
-        <div className="section__divider">
-          <span className="section__line" />
-          <span className="section__dot" />
-          <span className="section__line" />
-        </div>
-        <p className="section__body">
-          Pedimos, com carinho, que leiam as orientações a seguir — elas vão
-          ajudar a garantir o conforto, a organização e a harmonia da celebração.
-        </p>
-        <div className="convidados-info">
-          <div className="convidados-item">
-            <p className="convidados-item__title">Confirme sua presença</p>
-            <p className="convidados-item__sub">
-              Você receberá o link da confirmação de presença pelo número de seu celular
-            </p>
-          </div>
-          <div className="convidados-item">
-            <p className="convidados-item__title">Traje esporte fino</p>
-            <p className="convidados-item__sub">*Não usar branco</p>
-          </div>
-          <div className="convidados-item">
-            <p className="convidados-item__title">
-              O local da cerimônia será o mesmo da festa
-            </p>
-          </div>
-          <div className="convidados-item">
-            <p className="convidados-item__title">
-              Haverá a saída de vans no seguinte horário:
-            </p>
-            <p className="convidados-item__sub">20:00 &nbsp;·&nbsp; 21:30 &nbsp;·&nbsp; 23:00</p>
-          </div>
         </div>
       </section>
 
