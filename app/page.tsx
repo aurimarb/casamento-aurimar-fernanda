@@ -148,11 +148,9 @@ export default function Home() {
           <p className="section__body">
             O nosso casamento será em um local cercado pela natureza, um pouquinho
             afastado da cidade. Há várias opções de casas para aluguel na região,
-            além de hotéis próximos, principalmente em Arujá. Para facilitar,
-            vamos organizar um translado do hotel até o local da cerimônia/festa,
-            assim todo mundo pode curtir sem preocupações! E, se preferir ir de
+            além de hotéis próximos, principalmente em Arujá. Se preferir ir de
             carro, o espaço conta com um amplo estacionamento. Caso opte pelo
-            hotel, abaixo você encontra os hotéis que terão o translado:
+            hotel, abaixo você encontra os hotéis recomendados próximos ao local:
           </p>
           <ul className="venue-list">
             <li className="venue-list__item">
@@ -204,9 +202,15 @@ export default function Home() {
             </div>
             <div className="convidados-item">
               <p className="convidados-item__title">
-                Haverá a saída de vans no seguinte horário:
+                O espaço possui trechos de grama
               </p>
-              <p className="convidados-item__sub">20:00 &nbsp;·&nbsp; 21:30 &nbsp;·&nbsp; 23:00</p>
+              <p className="convidados-item__sub">Evite saltos finos para maior conforto</p>
+            </div>
+            <div className="convidados-item">
+              <p className="convidados-item__title">
+                Informações sobre vans:
+              </p>
+              <p className="convidados-item__sub">Em breve</p>
             </div>
           </div>
         </div>
@@ -222,6 +226,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* PRESENTE */}
+      <section className="section" id="presente">
+        <div className="presente-content">
+          <h2 className="section__title">LISTA DE PRESENTES</h2>
+          <div className="section__divider">
+            <span className="section__line" />
+            <span className="section__dot" />
+            <span className="section__line" />
+          </div>
+          <p className="section__body">Em breve</p>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="footer">
         <p className="footer__text">
@@ -230,7 +247,7 @@ export default function Home() {
           Sua presença torna esse dia ainda mais especial!
           <br />
           <br />
-          Caso tenha alguma dúvida, entre em contato:
+          Caso tenha alguma dúvida, entre em contato!
         </p>
         <div className="footer__divider" />
       </footer>

@@ -871,6 +871,11 @@ a {
   line-height: 1.5;
 }
 
+/* PRESENTE */
+.presente-content {
+  text-align: center;
+}
+
 /* Footer ceremony time */
 .footer__ceremony {
   font-family: var(--font-display);
