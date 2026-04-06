@@ -1,5 +1,6 @@
 import Image from "next/image";
 import images from "@/lib/export-image-sizes.json";
+import ListaPresentes from "./components/ListaPresentes";
 
 export default function Home() {
   const hero = images.aac;
@@ -235,7 +236,11 @@ export default function Home() {
             <span className="section__dot" />
             <span className="section__line" />
           </div>
-          <p className="section__body">Em breve</p>
+          <p className="section__body">
+            Sua presença já é o maior presente! Mas se quiser nos presentear,
+            preparamos uma lista simbólica com carinho.
+          </p>
+          <ListaPresentes />
         </div>
       </section>
 

@@ -876,6 +876,267 @@ a {
   text-align: center;
 }
 
+/* Grid de presentes — 3 colunas desktop, 2 tablet, 1 mobile */
+.presentes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.presente-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: var(--color-white);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  font-family: var(--font-display);
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+.presente-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 16px rgba(149, 175, 154, 0.15);
+}
+
+.presente-card--ativo {
+  border-color: var(--color-accent);
+  box-shadow: 0 4px 20px rgba(149, 175, 154, 0.25);
+}
+
+.presente-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.presente-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.presente-card__nome {
+  font-size: clamp(0.8125rem, calc(0.7rem + 0.4vw), 0.9375rem);
+  text-align: center;
+  line-height: 1.35;
+  padding: 0.5rem 0.75rem 0;
+}
+
+.presente-card__valor {
+  font-size: clamp(0.9375rem, calc(0.8rem + 0.5vw), 1.125rem);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+/* Botão sempre ocupa espaço, invisível até selecionado */
+.presente-card__btn {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.45rem 1.5rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-family: var(--font-display);
+  cursor: default;
+  transition: opacity 0.2s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.presente-card__btn--visivel {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+}
+
+.presente-card__btn--visivel:hover {
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+  .presentes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .presentes-grid {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .presente-card__btn {
+    padding: 0.4rem 1rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* Modal PIX */
+.pix-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.pix-modal {
+  position: relative;
+  background: var(--color-white);
+  border-radius: 16px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: pix-in 0.25s ease-out;
+}
+
+@keyframes pix-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.pix-modal__fechar {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.75rem;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.pix-modal__titulo {
+  font-family: var(--font-display);
+  font-size: clamp(0.9375rem, calc(0.8rem + 0.5vw), 1.125rem);
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.pix-modal__valor-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.pix-modal__cifrao {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, calc(1rem + 0.75vw), 1.625rem);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.pix-modal__valor-input {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, calc(1rem + 0.75vw), 1.625rem);
+  font-weight: 600;
+  color: var(--color-accent);
+  border: none;
+  border-bottom: 2px solid var(--color-accent);
+  background: transparent;
+  text-align: center;
+  width: 120px;
+  outline: none;
+  padding: 0.15rem 0;
+  -moz-appearance: textfield;
+}
+
+.pix-modal__valor-input::-webkit-outer-spin-button,
+.pix-modal__valor-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.pix-modal__valor-hint {
+  font-size: clamp(0.6875rem, calc(0.6rem + 0.3vw), 0.8125rem);
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.pix-modal__qr {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.pix-modal__qr svg {
+  border-radius: 8px;
+}
+
+.pix-modal__instrucao {
+  font-size: clamp(0.8125rem, calc(0.7rem + 0.35vw), 0.9375rem);
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.pix-modal__copia {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.pix-modal__payload {
+  flex: 1;
+  font-size: 0.625rem;
+  font-family: monospace;
+  color: var(--color-text);
+  word-break: break-all;
+  padding: 0.5rem 0.65rem;
+  line-height: 1.35;
+  max-height: none;
+  overflow: hidden;
+  user-select: all;
+}
+
+.pix-modal__copiar {
+  flex-shrink: 0;
+  width: 6.5rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: var(--color-white);
+  border: none;
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.pix-modal__copiar:hover {
+  opacity: 0.85;
+}
+
 /* Footer ceremony time */
 .footer__ceremony {
   font-family: var(--font-display);
