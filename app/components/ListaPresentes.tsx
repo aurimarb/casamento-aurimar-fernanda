@@ -13,78 +13,78 @@ interface Presente {
 const presentes: Presente[] = [
   {
     nome: "Café da manhã na cama",
-    imagem: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop&q=80",
-    valor: 100,
+    imagem: "https://images.unsplash.com/photo-1525351484163-7529414344d8?w=400&h=300&fit=crop&q=80",
+    valor: 200,
   },
   {
     nome: "Noite da pizza do casal",
     imagem: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop&q=80",
-    valor: 100,
+    valor: 230,
   },
   {
     nome: "Maratona de filmes e pipoca",
     imagem: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=300&fit=crop&q=80",
-    valor: 120,
+    valor: 260,
   },
   {
     nome: "Petiscos e cerveja artesanal",
     imagem: "https://images.unsplash.com/photo-1608270586620-248524c67de9?w=400&h=300&fit=crop&q=80",
-    valor: 120,
+    valor: 300,
+  },
+  {
+    nome: "Dia de relaxamento do Toddy",
+    imagem: "/toddy.jpeg",
+    valor: 350,
   },
   {
     nome: "Dia de spa e relaxamento",
     imagem: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=400&h=300&fit=crop&q=80",
-    valor: 150,
-  },
-  {
-    nome: "Tanque cheio para a lua de mel",
-    imagem: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=300&fit=crop&q=80",
-    valor: 150,
+    valor: 410,
   },
   {
     nome: "Churrasco de domingo",
-    imagem: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=400&h=300&fit=crop&q=80",
-    valor: 200,
+    imagem: "https://images.unsplash.com/photo-1558030006-450675393462?w=400&h=300&fit=crop&q=80",
+    valor: 480,
   },
   {
     nome: "Aula de dança a dois",
     imagem: "https://images.unsplash.com/photo-1504609813442-a8924e83f76e?w=400&h=300&fit=crop&q=80",
-    valor: 200,
+    valor: 560,
   },
   {
     nome: "Jantar romântico a dois",
     imagem: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop&q=80",
-    valor: 250,
+    valor: 660,
   },
   {
     nome: "Noite de vinhos e queijos",
     imagem: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop&q=80",
-    valor: 300,
+    valor: 780,
   },
   {
     nome: "Passeio de barco",
-    imagem: "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400&h=300&fit=crop&q=80",
-    valor: 400,
+    imagem: "https://images.unsplash.com/photo-1782139137966-e4c7f5f014eb?w=400&h=300&fit=crop&q=80",
+    valor: 920,
   },
   {
     nome: "Experiência gastronômica",
-    imagem: "https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=400&h=300&fit=crop&q=80",
-    valor: 500,
+    imagem: "https://images.unsplash.com/photo-1628169822580-ca53b886cdc9?w=400&h=300&fit=crop&q=80",
+    valor: 1200,
   },
   {
     nome: "Diária em hotel",
     imagem: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=300&fit=crop&q=80",
-    valor: 700,
+    valor: 1650,
   },
   {
     nome: "Fim de semana na praia",
     imagem: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop&q=80",
-    valor: 1200,
+    valor: 2250,
   },
   {
     nome: "Lua de mel dos sonhos",
     imagem: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&h=300&fit=crop&q=80",
-    valor: 2000,
+    valor: 3000,
   },
 ];
 
@@ -145,8 +145,8 @@ function gerarPixPayload(
   return payload;
 }
 
-// Chave PIX — telefone no formato internacional DICT (+55 + DDD + número)
-const PIX_CHAVE = "+5586981230201";
+// Chave PIX 
+const PIX_CHAVE = "casamentoaurimarefernanda@gmail.com";
 const PIX_NOME = "AurimareFernanda";
 const PIX_CIDADE = "SaoPaulo";
 
