@@ -8,6 +8,7 @@ interface Presente {
   nome: string;
   imagem: string;
   valor: number;
+  ajuste?: "contain";
 }
 
 const presentes: Presente[] = [
@@ -57,28 +58,43 @@ const presentes: Presente[] = [
     valor: 660,
   },
   {
-    nome: "Noite de vinhos e queijos",
-    imagem: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400&h=300&fit=crop&q=80",
+    nome: "Degustação de vinhos e queijos em Roma",
+    imagem: "https://images.unsplash.com/photo-1719996155228-bbac3f5a8843?w=400&h=300&fit=crop&q=80",
     valor: 780,
   },
   {
-    nome: "Passeio de barco",
-    imagem: "https://images.unsplash.com/photo-1782139137966-e4c7f5f014eb?w=400&h=300&fit=crop&q=80",
+    nome: "Passeio de barco por Sorrento",
+    imagem: "https://images.unsplash.com/photo-1658988177065-c07b1abbc2bc?w=400&h=300&fit=crop&q=80",
     valor: 920,
   },
   {
-    nome: "Experiência gastronômica",
-    imagem: "https://images.unsplash.com/photo-1628169822580-ca53b886cdc9?w=400&h=300&fit=crop&q=80",
+    nome: "Aula de macarrão em Florença",
+    imagem: "https://images.unsplash.com/photo-1642354571956-d77dfd9596bb?w=400&h=300&fit=crop&q=80",
     valor: 1200,
   },
   {
+    nome: "Tour guiado pelo Coliseu",
+    imagem: "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=400&h=300&fit=crop&q=80",
+    valor: 1350,
+  },
+  {
+    nome: "Visita às adegas na Toscana",
+    imagem: "https://images.unsplash.com/photo-1596142332133-327e2a0ff006?w=400&h=300&fit=crop&q=80",
+    valor: 1550,
+  },
+  {
     nome: "Diária em hotel",
-    imagem: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&h=300&fit=crop&q=80",
+    imagem: "https://images.unsplash.com/photo-1782233543052-e147fc9f4903?w=400&h=300&fit=crop&q=80",
     valor: 1650,
   },
   {
-    nome: "Fim de semana na praia",
-    imagem: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&h=300&fit=crop&q=80",
+    nome: "Passeio em Bolonha",
+    imagem: "https://images.unsplash.com/photo-1650599112931-8afe018738b6?w=400&h=300&fit=crop&q=80",
+    valor: 1850,
+  },
+  {
+    nome: "Passeio em Nápoles",
+    imagem: "https://images.unsplash.com/photo-1534445867742-43195f401b6c?w=400&h=300&fit=crop&q=80",
     valor: 2250,
   },
   {
@@ -174,6 +190,7 @@ export default function ListaPresentes() {
                   width={400}
                   height={300}
                   className="presente-card__img"
+                  style={p.ajuste === "contain" ? { objectFit: "contain" } : undefined}
                   sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
                 />
               </div>
